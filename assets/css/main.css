@@ -23,7 +23,8 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -4688,3 +4689,42 @@ input, select, textarea {
 		}
 
 	}
+
+/**Google Translate*/
+
+#google_language_change{
+	position: relative;
+	top: 50px;
+	left: 50px;
+	width: 190px;
+	z-index: 1000;
+}
+.goog-logo-link{
+	display: none !important;
+}
+.goog-te-gadget{
+	color: transparent !important;
+}
+.goog-te-gadget .goog-te-combo{
+	color: black;
+	background: white;
+	border-radius: 5px;
+}
+.goog-te-gadget a{
+	visibility: hidden;
+}
+.goog-te-gadget select{
+	margin: 0px !important;
+	padding: 0px 0px 0px 10px; /* top right bottom left*/
+	-webkit-appearance:listbox ;
+}
+
+
+.post p{
+	text-indent: 30px;
+}
+#main img{
+	width: 60%;
+	display: block;
+	margin: 30px auto;
+}

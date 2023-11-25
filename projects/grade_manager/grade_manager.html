@@ -1,121 +1,459 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE HTML><html>
 	<head>
-		<title>Projects</title>
+		<title>Student Grades Manager In C++</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<link rel="icon" href="media/favicon.ico">
+		<script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=loadGooleTranslate" defer></script>
 	</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper" class="fade-in">
 
-				<!-- Header -->
-					<header id="header">
-						<a href="#" class="logo">Projects</a>
+			<!-- Google Translate -->
+			<div id="google_language_change"></div>
+			
+
+			<!-- Intro -->
+			<div id="intro">
+				<h1>Student Grades Manager In C++</h1>
+				<ul class="actions">
+					<li><a href="#nav" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+				</ul>
+			</div>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="../../index.html">Home</a></li>
+					<li><a href="../../about.html">ABOUT ME</a></li>
+					<li><a href="../../projects.html">Projects</a></li>
+					<li><a href="../../resume.html">CV</a></li>
+				</ul>
+				<ul class="icons">
+					<li><a href="https://www.linkedin.com/in/zikonde-nyirenda-7084b7219" class="icon brands alt fa-linkedin" target="_blank"><span class="label">Linkedin</span></a></li>
+					<li><a href="https://github.com/zikonde" class="icon brands alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+					<li><a href="https://instagram.com/zikonde_nyirenda?igshid=OGQ5ZDc2ODk2ZA==" class="icon brands alt fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+				</ul>
+			</nav>
+
+			
+			<!-- Main -->
+			<div id="main">
+
+				<!-- Post -->
+				<section class="post">
+					<header class="major">
+						<span class="date">Jun 11, 2022</span>
+						<h1>Student Grades Manager In C++ with Embarcadero Dev</h1>
+						<p>In this project we create a program through through which teachers can log in to the system using their username and password, enter and save student scores, and implement some basic functions, conduct simple student score management, and optimize the user experience through the human-computer interaction interface.</p>
 					</header>
+					<div class="image main">
+						<center>
+							<video src="media/运行.mp4" muted autoplay width="50%"></video>
+						</center>
+					</div>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="about.html">ABOUT ME</a></li>
-							<li><a href="projects.html">Projects</a></li>
-							<li><a href="resume.html">Resumé</a></li>
-						</ul>
-						<ul class="icons">
+					<ol>
+					<p>
+						<h2>1. Design tasks</h2>
+
+							<ol>
+								<h3>1.1 purpose of design</h3>
+									<p>Through the program, teachers and users can log in to the system with the account and password to log in, enter and save the students' scores, and at the same time, realize some basic functions, conduct simple student performance management, and optimize the user experience through the improvement of the human-computer interaction interface.</p>
+								<h3>1.2 design content</h3>
+									<p>Requires information from both teachers and students.</p>
+								
+									<p>Function of the program: view, find, input, edit, modify, delete, and sort student records, in order to ensure information security, also need to login and log out function.</p>
+								
+									<p>Interface design: login interface, the main function interface, and the interface after entering the main functions.</p>
+							</ol>
+
+						<h2>2. Design Process</h2>
+
+							<ol>
+								<h3>2.1 Program function</h3>
+									<p>Each student record is composed of the name, student number/ID, major, class, math score, Chinese score, English score, and Average score.</p>
+								
+									<p>The program functions are provided as follows:</p>
+								
+										<p>（1） Login interface: Teachers log in to the system by entering their name, user ID, and password.</p>
+								
+										<p>（2） View all student information: display the information of all students one by one, and provide the search function.</p>
+								
+										<p>（3） Search function: find the corresponding student record according to the input name or student number. When entering the name and student number at the same time, only the student information will be displayed if the name and student number match with the corresponding record at the same time.</p>
+								
+										<p>（4） Enter the student record: Enter the student's name, student number, major, class, and three scores. The average score is automatically generated according to the average of the three scores to form a complete student record, then save the data.</p>
+								
+										<p>（5） Modify student records: use the search function to change the student records after searching the student information.</p>
+								
+										<p>（6） Delete the student record: use the search function to query the student record and delete the record.</p>
+								
+										<p>（7） Ranking of students' grades: the students' names, student numbers, and scores can be sorted through the click of a button, and the ranking order can be changed by clicking the rank button again.</p>
+								
+										<p>（8） Cancel: quit the teacher's account and return to the login interface.</p>
+								<h3>2.2 Principle of the algorithm</h3>
+									<p>（1） Search principle: According to the name or student number of the search, go through the value of this item in each data of the array, and return the number of the consistent data. If the consistent data is not found, return -1, and then display the corresponding data according to the number of the returned data. If it is -1, the data does not exist.</p>
+									<p>（2） Sorting principle: by defining the number of flags as 1 and -1 to sort in ascending and descending order, and change the number of flags * (-1), so as to change the sorting method.</p>
+										<p>In ascending order, define the parameter min to i, compare the item of the i-th record with the record from and after the (i + 1)-th, find the k record where the corresponding item is greater than the i-th record, min=k, and exchange the i-th record with the k record. Then do the same again  for (i + 1) (i range from 0 to n - 1). The same goes for the descending-order ordering.</p>
+								<h3>2.3 Program Flowchart</h3>
+								
+									<img src="media\image1.png" alt="Flowchart">
+
+								<h3>2.4 Main modules or functions of the program</h3>
+									<p>data structure (Objects):</p>
+										<p>（1） Person: Made up of Name (string) and ID Number(string):</p>
+										<p>（2） Teacher: Inherit the data of the **Person class**, and have the Password (string) data. (data storage in the " Teachers.txt" file)</p>
+										<p>（3） Course: Made up of Course name (string) and Score (double), with a static variable count used to record the number of courses.</p>
+										<p>（4） Student: Inherit the **Person class**, including Class (string) and Major (string), three variables of **Course class** (Mathematics, Chinese, and English), and Average Score (double). Student entries are stored in the file of the format "[teacher's name].txt".</p>
+										
+											<img src="media\image2.png" alt="Structure">
+
+									<p>Main modules:</p>
+										<p>（1） Login: Display the login interface. After pressing the login button, the input name, user ID, and password are compared with that in the database (Teachers.txt ) to determine whether the user is allowed to enter the main function interface.</p>
+										<p>（2） Home: Main function interface that provides buttons for various functions and log-off. Go into different modules by clicking the corresponding buttons.</p>
+										<p>（3） Sign out: After pressing the cancel button and confirming, return to the login interface, and select "No" to stay in the Main Menu.</p>
+										<p>（4） View: display the viewing interface to read the student information from the txt file corresponding to the login teacher name to enable the user	You can enter your name or student number in the dialog box and click the query function to query the corresponding students, and provide the return button and click the return	Back to the Main Menu.</p>
+										<p>（5） Add Student: Display the add interface, provide the dialog box to input the students' information, and press the save button. The data is then stored in the txt file of the teacher. After pressing the continue button, the input content is cleared in the dialog box. Continue to add data and click on the return button to return to the Main Menu.</p>
+										<p>（6） Edit: display the editing interface, provide the search function, and display the student information in the editable dialog box for repair. Change, after pressing the save button, store the change data in the corresponding file, and provide the return button, click and return to the Main Menu.</p>
+										<p>（7） Delete Student: Display the delete interface, provide the search function, and can click after displaying the found student records. The Delete button will Delete the current record, and click on the provided return button to return to the Main Menu.</p>
+										<p>（8）Sort: display the sorting interface, provides the button sorted by student number, name, and average score, and can change the drop after pressing	Order sorting mode, providing the return button to return to the Main Menu.</p>
+							</ol>
+
+
+						<h2>3. Software operation or test results</h2>
+							<ol>
+								<h3>3.1 Login interface:</h3>
+								
+								<img src="media\image3.png" alt="log-in">
+
+									<p>"This user does not exist" appears after entering the wrong user name:</p>
+								
+									<img src="media\image4.jpeg" alt="user_does_not_exist">
+
+									<p>"Incorrect Password" appears after entering the wrong password:</p>
+
+									<img src="media\image5.png" alt="Incorrect Password">
+
+									<p>"Icnoorect password or ID number":</p>
+
+									<img src="media\image6.png" alt="Icnoorect password or ID number">
+
+								<h3>3.2 Home page interface</h3>
+								
+								<img src="media\image7.png" alt="Home">
+
+								<h3>3.3 View function</h3>
+								
+								<img src="media\image8.png" alt="View">
+
+									<p>Enter a name to search for:</p>
+								
+									<img src="media\image9.png" alt="search">
+
+									<p>If the input name and/or student number searched for to not correspond to any student, then the return value shall be "Student Not Found":</p>
+								
+									<img src="media\image10.png" alt="not found">
+
+									<p>When the name or student number searched have one or more students found (only one per student number as this is a non repeating variable), then the returned value will be a list of the student(s):</p>
+
+									<img src="media\image11.png" alt="found">
+
+								<h3>3.4 Input / Adding Student function</h3>
+
+									<img src="media\image12.png" alt="data inputing">
+
+									<p>After entering all the data, click the save button. When successful, the save the button becomes deactivated. The continue button can be used to keep adding students and results:</p>
+								
+									<img src="media\image13.png" alt="save">
+
+									<p>After pressing the continue button, all the chat box is cleared to continue entering data:</p>
+								
+									<img src="media\image14.png" alt="continue">
+
+									<p>Enter the view function to find the new student records</p>
+									
+								<img src="media\image15.png" alt="View">
+
+								<h3>3.5 Modify function</h3>
+								
+								<img src="media\image16.png" alt="modify">
+
+									<p>Search for the name or student number of the student you with to modify:</p>
+								
+									<img src="media\image17.png" alt="serach">
+
+									<p>Modifying the English score for example:</p>
+								
+									<img src="media\image18.png" alt="modify score">
+								
+									<p>The recorded English scores have been successfully modified and saved:</p>
+									
+								<img src="media\image19.png" alt="save">
+
+								<h3>3.6 The Delete function</h3>
+								
+								<img src="media\image20.png" alt="delete">
+
+									<p>Search for the name or student number of the student you wish to delete:</p>
+								
+									<img src="media\image21.png" alt="search">
+
+									<p>Click the Delete button to delete this record:</p>
+									
+								<img src="media\image22.png" alt="confirm">
+
+								<h3>3.7 The Sort function</h3>
+								
+								<img src="media\image23.png" alt="sort">
+
+									<p>Sort by name:</p>
+								
+									<img src="media\image24.png" alt="sort_by_name1">
+									<img src="media\image25.png" alt="sort_by_name2">
+
+									<p>Sort by student number:</p>
+								
+									<img src="media\image26.png" alt="sort_by_student_number1">
+									<img src="media\image27.png" alt="sort_by_student_number2">
+
+									<p>Sort by average score:</p>
+									
+								<img src="media\image28.png" alt="sort_by_average_score">
+
+								<h3>3.8 Logging Out</h3>
+									<p>Select Yes and return to the login screen:</p>
+								
+								<img src="media\image29.png" alt="log-out">
+
+									<p>Log-out successful:</p>
+									
+								<img src="media\image30.png" alt="confirm">
+
+							</ol>
+
+
+						<h2>4. Some Problems encountered in the software design process and solutions</h2>
+
+							<ol>
+								<p><b>Problem 1:</b> Data retention, We wanted to save data so you can see it in time.</p>
+								
+								<p><b>Solution:</b> Create a txt file write.</p>
+								
+								
+								<p><b>Problem 2:</b> unclear data storage location</p>
+								
+								<p><b>Solution:</b> Make the path.h header file, then create the file directory. For example</p>
+								
+								<ol>
+									<ol>
+										<ol>
+											<code>
+												#ifndef PATH_H
+												<br/>
+												#define PATH H
+												<br/>
+												#include <string>
+												<br/>
+												#include <fstream>
+												<br/>
+												#include <direct.h>
+												<br/>
+												std::string path="c:\学生成绩管理\”;
+												<br/>
+												int makedir(){
+												<br/>
+													return _mkdir("c:\学生成绩管理"); //创硅文件夹
+												<br/>
+												}
+												<br/>
+												std: :string getCurrentUsername(){
+												<br/>
+													std: :string currentUsername;
+												<br/>
+													std::ifstream file(path+"temp.txt");
+												<br/>
+													file>>currentUsername;
+												<br/>
+													file.close();
+												<br/>
+													return currentUsername;
+													}
+												<br/>
+												std::string getPath(){return path;}
+												<br/>
+												#endif
+												<br/>
+											</code>
+										</ol>
+									</ol>
+								</ol>
+
+								<p>To write or read a file, then include "path.h ”。</p>
+
+								<ol>
+									<ol>
+										<ol>
+											<code>#include "path.h"</code>
+										</ol>
+									</ol>
+								</ol>
+								
+								
+								<p><b>Problem 3:</b> How to identify which teacher is logged in, and how does the system match and correspond to the teacher's personal information with the relevant data in the system.</p>
+								
+								<p><b>Solution:</b> Using the temp.txt document. .bd files and othersafer alternatives couls be used. we chose to use .txt files for simplicity sake.</p>
+									
+								<img src="media\image33.png" alt="txt">
+								
+								<p>The access process is as follows</p>
+								
+								<img src="media\image34.png" alt="read">
+								
+								
+								<p><b>Problem 4:</b> Read the data from the file</p>
+								
+								<p><b>Solution:</b> Commas are used to separate the data, create functions that process the data, and put the information into the vector</p>
+								
+								<img src="media\image35.png" alt="decleration">
+								<img src="media\image36.png" alt="usage">
+								
+								
+								<p><b>Problem 5:</b> Program optimization and data protection</p>
+								
+								<p><b>Solution:</b> many places use the selection and loop statements to determine whether to make data access. This speeds up the software runtime and protects the data.</p>
+								
+								
+								<p><b>Problem 6:</b> Different functions need to use the same allStudents class v ector, it is too troublesome to pass the pointer or the value</p>
+								
+								<p><b>Solution:</b> A global allStudents class v ector is used, so that there is no transfer.</p>
+								
+								
+								<p><b>Problem 7:</b> student class members, one input and output inconvenience.</p>
+								
+								<p><b>Solution:</b> Overloaded the in-and-out output operators for iostream and fstream</p>
+								
+								
+								<p><b>Problem 8:</b> How to know how many courses there are in total</p>
+								
+								<p><b>Solution:</b> abstraction of the course class, add the static members of count, different hard coding</p>
+
+								<img src="media\image37.png" alt="course class">
+								<img src="media\image38.png" alt="inheritance">
+								
+								<p><b>Problem 9:</b> Students are ordered in ascending and descending order</p>
+								
+								<p><b>Solution:</b> The use of static variables </p>
+								
+								<img src="media\image39.png" alt="decleration">
+								<img src="media\image40.png" alt="use">
+								
+								
+								<p><b>Problem 10:</b> Students find up</p>
+								
+								<p><b>Solution:</b> Create the up function.</p>
+								
+								<img src="media\image39.png" alt="decleration">
+								<img src="media\image40.png" alt="implementation">
+								
+								
+									<p>In the process of creating the apllication, we also encountered more detailed problems. Due to the complicated and complicated process, only the main problems and solutions are shown here. In addition, there are some bugs to be solved in the apllication, and we will continue to study them in depth.</p>
+							</ol>
+							
+
+
+						<h2>5. Brief description of the self-study content</h2>
+
+							<ol>
+								<ul>
+									
+										<p><li> Embarcadero c++ Builder, which is used to make a GUI.</li></p>
+									
+								
+									<p> <li>How to make the file directory <code>_mkdir()</code>.</li></p>
+								
+									<p> <li>Write and read the file <code>fstream</code>.</li></p>
+								
+									<p> <li>String, Headfiles, including <code>strcmp()</code>,.</li></p>
+								
+									<p> <li>Vector The header file and its member function e.g. <code>front()</code> The <code>swap()</code>, <code>push_back()</code>, <code>pop_back()</code>, <code>size()</code>, etc.</li></p>
+								
+									<p><li><code>sstream</code> And its member functions.</li></p>
+								
+									<p><li>Overloading of the <code>iostream</code> and stream input and stream output operators</li></p>
+								
+									<p> <li><code>windows.h</code> and its member function e.g. <code>system()</code>, <code>Sleep()</code>, <code>color()</code>。</li></p>
+								
+									<p> <li><code>fmx.h</code></li></p>
+								</ul>
+							</ol>
+
+
+						<h2>6 Summary</h2>
+
+							<ol>
+								<p>With a strong interest in C + + and C language, I took the two courses, from the language and theory knowledge do not understand, do not understand to use them to code, from a simple code to understand to now can code a program alone, in this process have pain, happiness, anxiety, excitement, but I learned a lot. C + + language is a kind of compilation language compatible with C language and oriented to processes and objects. It is highly theoretical, comprehensive, and practical, involving many aspects such as ideas, methods, grammar, and algorithms of programming, which makes people find it difficult to learn. I am a cross-major student, but I want to increase my knowledge and expand my development in more aspects, so I persisted with my strong interest in C + +. In the beginning, I would be very frustrated and find it difficult, but when I wrote a small program for the first time, my happy feeling was indescribable. I made sure I paid attention to the teacher's class, and when I still didn't understand I continued to find relevant videos and documents to learn, I slowly understood the class and the problems in programming. Through this program design, I once again reviewed and got familiar with the theoretical knowledge of C++ language, especially when it came to pointers and OOP. In addition, I learned about the use of Embarcadero, learned about the interface button and function code connection, and learned about the operation and application of tags, list boxes, editing boxes, and other contents.</p>
+							</ol>
+					</p>
+
+					</ol>
+
+					<br/>
+
+					<footer>
+						<div class="pagination">
+							<a href="https://github.com/zikonde/Grade_Manager" class="next" target="_blank">View Project on github</a>
+						</div>
+					</footer>
+			</section>
+</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<section class="split contact">
+					<section class="alt">
+						<h3>Location</h3>
+						<p>Sichuan, Chengdu, China 610207</p>
+					</section>
+					<section>
+						<h3>Phone</h3>
+						<p><a href="tel:+8617543995748" type="Phone">(+86) 175-4399-5748</a></p>
+					</section>
+					<section>
+						<h3>Email</h3>
+						<p><a href="mailto:zikonde.nyirenda.5@gmail.com" translate="no">zikonde.nyirenda.5@gmail.com</a>&ensp;&ensp;</p>
+						<br/>
+						<p><a href="mailto:2819960965@qq.com">2819960965@qq.com</a></p>
+					</section>
+					<section>
+						<h3>Social</h3>
+						<ul class="icons alt">
 							<li><a href="https://www.linkedin.com/in/zikonde-nyirenda-7084b7219" class="icon brands alt fa-linkedin" target="_blank"><span class="label">Linkedin</span></a></li>
 							<li><a href="https://github.com/zikonde" class="icon brands alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
 							<li><a href="https://instagram.com/zikonde_nyirenda?igshid=OGQ5ZDc2ODk2ZA==" class="icon brands alt fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
 						</ul>
-					</nav>
+					</section>
+				</section>
+			</footer>
 
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Post -->
-							<section class="post">
-								<header class="major">
-									<span class="date">April 25, 2017</span>
-									<h1>This is a<br />
-									Generic Page</h1>
-									<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
-									facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
-									amet nullam sed etiam veroeros.</p>
-								</header>
-								<div class="image main"><img src="images/pic01.jpg" alt="" /></div>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sapien risus, commodo eget turpis at, elementum convallis enim turpis, lorem ipsum dolor sit amet nullam.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus. Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum.</p>
-							</section>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>1234 Somewhere Road #87257<br />
-								Nashville, TN 00000-0000</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(000) 000-0000</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">info@untitled.tld</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
-
+			<!-- Copyright -->
+			<div id="copyright">
+				<ul><li translate="no">&copy; Zikonde Nyirenda</li><li><span id="year"></span></li></ul>
 			</div>
 
+		</div>
+
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script src="../../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../../assets/js/browser.min.js"></script>
+			<script src="../../assets/js/breakpoints.min.js"></script>
+			<script src="../../assets/js/util.js"></script>
+			<script src="../../assets/js/main.js"></script>
 
 	</body>
 </html>

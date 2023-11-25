@@ -5,6 +5,12 @@
 */
 document.getElementById("year").innerHTML = new Date().getFullYear();
 
+//Google Translate
+function loadGooleTranslate(){
+	new google.translate.TranslateElement(
+		"google_language_change");
+}
+
 (function($) {
 
 	var	$window = $(window),
